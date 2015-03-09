@@ -1,0 +1,8 @@
+autocomplete.entity_autocomplete:
+  path: '/autocomplete/entity/{target_type}/{selection_handler}/{selection_settings}'
+  defaults:
+    _controller: 'autocomplete.entity.controller:handleAutocomplete'
+    _limit: 10
+    selection_settings: ''
+  requirements:
+    _access: 'TRUE'

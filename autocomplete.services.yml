@@ -1,0 +1,8 @@
+services:
+  autocomplete.entity.autocomplete_matcher:
+    class: Drupal\autocomplete\EntityAutocompleteMatcher
+    parent: entity.autocomplete_matcher
+
+  autocomplete.entity.controller:
+    class: Drupal\system\Controller\EntityAutocompleteController
+    arguments: ['@autocomplete.entity.autocomplete_matcher']
